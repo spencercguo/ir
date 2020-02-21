@@ -21,9 +21,9 @@ def autocorrelation(dipoles):
 	#
 	# Returns an array containing the autocorrelations for each lag.
 
-	correlation_x = correlate(dipoles[0], dipoles[0])
-	correlation_y = correlate(dipoles[1], dipoles[1])
-	correlation_z = correlate(dipoles[2], dipoles[2])
+	correlation_x = correlate(dipoles[:,0], dipoles[:,0])
+	correlation_y = correlate(dipoles[:,1], dipoles[:,1])
+	correlation_z = correlate(dipoles[:,2], dipoles[:,2])
 
 	return correlation_x + correlation_y + correlation_z
 
